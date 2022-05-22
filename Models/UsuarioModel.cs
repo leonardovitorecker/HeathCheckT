@@ -17,5 +17,6 @@ namespace HeathCheck1.Models
 
     
         public string senhaUsuario { get; set; }
+        public List<ConsultaModel> consultas { get; set; }
     }
 }

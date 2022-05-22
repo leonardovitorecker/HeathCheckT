@@ -22,5 +22,7 @@ namespace HeathCheck1.Models
         public int especialidadeid { get; set; }
 
         public EspecialidadeModel especialidade { get; set; }
+
+        public List<ConsultaModel> consultas { get; set;}
     }
 }

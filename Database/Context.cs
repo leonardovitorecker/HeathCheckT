@@ -20,5 +20,7 @@ namespace HeathCheck1.Database
         public DbSet<EspecialidadeModel>? especialidades { get; set; }
         public DbSet<EspecialistaModel> especialistas { get; set; }
         public DbSet<UsuarioModel> usuarios { get; set; }
+
+        public DbSet<ConsultaModel> consultas { get; set; }
     }
 }
