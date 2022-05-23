@@ -13,12 +13,5 @@ namespace HeathCheck1.Repositorios
 
      
 
-        public ConsultaModel SalvarConsulta(ConsultaModel consulta)
-        {
-            _bancocontext.consultas.Add(consulta);
-            _bancocontext.SaveChanges();
-
-            return consulta;
-        }
     }
 }

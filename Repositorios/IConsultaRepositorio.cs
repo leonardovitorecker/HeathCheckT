@@ -4,6 +4,6 @@ namespace HeathCheck1.Repositorios
 {
     public interface IConsultaRepositorio
     {
-        ConsultaModel SalvarConsulta(ConsultaModel consulta); 
+    
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HeathCheck1.Database;
 using HeathCheck1.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HeathCheck1.Repositorios
 {
@@ -11,9 +12,10 @@ namespace HeathCheck1.Repositorios
             _bancocontext = context;
         }
 
-        public EspecialidadeModel ListarEspecialidadePorId(int id)
+        public List<EspecialidadeModel> ListarEspecialidade(int id)
         {
-            return _bancocontext.especialidades.FirstOrDefault(x =>x.id== id);
+            
+            return _bancocontext.especialidades.ToList();
 
         }
 
@@ -30,5 +32,8 @@ namespace HeathCheck1.Repositorios
             return especialista;
         }
         
+
+        }
     }
-}
+
+

@@ -9,20 +9,20 @@ namespace HeathCheck1.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
-        public string name { get; set; }
-        public string sobrenome { get; set; }
+        public string? name { get; set; }
+        public string? sobrenome { get; set; }
 
-        public string registro { get; set; }
+        public string? registro { get; set; }
 
-        public string email { get; set; }
+        public string? email { get; set; }
 
-        public string telefone { get; set; }
-        public string senha { get; set; }
+        public string? telefone { get; set; }
+        public string? senha { get; set; }
 
         public int especialidadeid { get; set; }
 
-        public EspecialidadeModel especialidade { get; set; }
+        public EspecialidadeModel? especialidade { get; set; }
 
-        public List<ConsultaModel> consultas { get; set;}
+     
     }
 }

@@ -44,22 +44,13 @@
    <input type="text" asp-for="sobrenome" class="form-control" placeholder="Digite seu sobrenome">
     </div>
      <div class="form-group">
-      <input asp-for="especialidade" class="form-control" placeholder="selecione sua especialidade" >
-   <datalist id="especialidades">
-   <input asp-controller="Especialista" asp-action="BuscarEspecialidadePorId" method="get"/> 
-       <option>21</option>
+      <input asp-for="especialidade"  placeholder="selecione sua especialidade" >
+   <select> 
+     for(<options>especialidade.nome</options>)
        <option>131</option>
-   </datalist>
-
-    </div>
-    <div class="form-group"  >
-   <input list="especialidades" />
-   <datalist id="especialidades"> 
-       <option>1231 </option>
-        <option>1231 </option>
-         <option>1231 </option>
-   </datalist>
+   </select>
    </div>
+  
     
   
    

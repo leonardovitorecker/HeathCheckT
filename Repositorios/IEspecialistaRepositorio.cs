@@ -1,4 +1,5 @@
 ﻿using HeathCheck1.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HeathCheck1.Repositorios
 {
@@ -6,9 +7,10 @@ namespace HeathCheck1.Repositorios
     {
         List<EspecialistaModel> ListarEspecialistas();
 
-       EspecialidadeModel ListarEspecialidadePorId(int id);
+      List<EspecialidadeModel> ListarEspecialidade(int id);
 
         EspecialistaModel SalvarEspecialista(EspecialistaModel especialista);
+       
 
     }
 }

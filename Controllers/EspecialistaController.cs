@@ -18,9 +18,9 @@ namespace HeathCheck1.Controllers
         }
 
         //GET:EspecialistaController/BuscarEspecialidade
-        public ActionResult BuscarEspecialidadeId(int id)
+        public ActionResult BuscarEspecialidade()
         {
-            EspecialidadeModel especialidade = _especialistaRepositorio.ListarEspecialidadePorId(id);
+            List<EspecialidadeModel> especialidade = _especialistaRepositorio.ListarEspecialidade();
             return View(especialidade);
 
         }

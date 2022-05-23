@@ -10,13 +10,13 @@ namespace HeathCheck1.Models
         public int id { get; set; }
 
       
-        public string nomeUsuario { get; set; }
+        public string? nomeUsuario { get; set; }
 
        
-        public string emailUsuario { get; set; }
+        public string? emailUsuario { get; set; }
 
     
-        public string senhaUsuario { get; set; }
-        public List<ConsultaModel> consultas { get; set; }
+        public string? senhaUsuario { get; set; }
+       
     }
 }
