@@ -7,11 +7,7 @@ namespace HeathCheck1.Models
 {
     public class EspecialidadeModel
     {
-        
-      
-
-        
-
+       
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -20,34 +16,7 @@ namespace HeathCheck1.Models
         public List<SelectListItem>? especialidades { get; set; }
         public ICollection<EspecialistaModel>? especialistas { get; set; }
 
-        public List<SelectListItem> CarregaEspecialidades(int id)
-        {
-            var lista = new List<SelectListItem>();
-            var especialidades = _bancocontext.especialidades.ToList();
-            try
-            {
-                foreach (var item in especialidades)
-                {
-                    var option = new SelectListItem()
-                    {
-                        Text = item.nome,
-                        Value = item.nome,
-                        Selected = (item.id == id)
-                    };
-
-                   lista.Add(option);
-
-
-                }
-                return lista;
-            }
-
-            catch (Exception ex)
-            {
-                throw;
-            }
-
-        }
+      
 
     }
 }
