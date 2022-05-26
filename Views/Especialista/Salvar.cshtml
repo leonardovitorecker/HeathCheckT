@@ -43,11 +43,19 @@
     <div class="form-group"  >
    <input type="text" asp-for="sobrenome" class="form-control" placeholder="Digite seu sobrenome">
     </div>
-     <div class="form-group">
-      <input asp-for="especialidade"  placeholder="selecione sua especialidade" >
-   <select> 
-     for(<options>especialidade.nome</options>)
-       <option>131</option>
+     <div >
+  
+   <select name="especialidade" asp-action="BuscarEspecialidade">
+      <% foreach(var in model)
+      {%>
+        <%=Html.actionLink"BuscarEspecialidade",new {id=item.id}  </%>
+
+      }
+     <option value=1 selected> selecione  a especialidade</option>
+
+   <option value=2>item.nome</option>
+   <option>43214123</option>
+      
    </select>
    </div>
   

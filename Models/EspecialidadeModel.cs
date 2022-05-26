@@ -7,16 +7,20 @@ namespace HeathCheck1.Models
 {
     public class EspecialidadeModel
     {
-       
-
+    
+    
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         public string? nome { get; set; }
-        public List<SelectListItem>? especialidades { get; set; }
+     
         public ICollection<EspecialistaModel>? especialistas { get; set; }
 
+
+        
       
 
+                
+            
     }
 }

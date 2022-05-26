@@ -6,8 +6,7 @@ namespace HeathCheck1.Repositorios
     public interface IEspecialistaRepositorio
     {
         List<EspecialistaModel> ListarEspecialistas();
-
-      List<EspecialidadeModel> ListarEspecialidade(int id);
+        List<EspecialidadeModel> ListarEspecialidade();
 
         EspecialistaModel SalvarEspecialista(EspecialistaModel especialista);
        

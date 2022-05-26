@@ -20,8 +20,9 @@ namespace HeathCheck1.Controllers
         //GET:EspecialistaController/BuscarEspecialidade
         public ActionResult BuscarEspecialidade()
         {
-            List<EspecialidadeModel> especialidade = _especialistaRepositorio.ListarEspecialidade();
+           List<EspecialidadeModel> especialidade = _especialistaRepositorio.ListarEspecialidade();
             return View(especialidade);
+          
 
         }
         
