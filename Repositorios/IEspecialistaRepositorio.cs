@@ -7,7 +7,7 @@ namespace HeathCheck1.Repositorios
     {
         List<EspecialistaModel> ListarEspecialistas();
 
-      List<EspecialidadeModel> ListarEspecialidade(int id);
+   
 
         EspecialistaModel SalvarEspecialista(EspecialistaModel especialista);
        

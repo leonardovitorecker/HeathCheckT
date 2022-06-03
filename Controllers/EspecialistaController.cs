@@ -1,7 +1,10 @@
-﻿using HeathCheck1.Models;
+﻿using HeathCheck1.Database;
+using HeathCheck1.Models;
 using HeathCheck1.Repositorios;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeathCheck1.Controllers
 {
@@ -9,34 +12,40 @@ namespace HeathCheck1.Controllers
     {
         private readonly IEspecialistaRepositorio _especialistaRepositorio;
 
-        public EspecialistaController(IEspecialistaRepositorio especialistaRepositorio)
+
+        private readonly Context _bancocontext;
+
+
+        public EspecialistaController(IEspecialistaRepositorio especialistaRepositorio, Context context)
         {
             _especialistaRepositorio = especialistaRepositorio;
-         
 
+            _bancocontext = context;
 
         }
 
         //GET:EspecialistaController/BuscarEspecialidade
         public ActionResult BuscarEspecialidade()
         {
-            List<EspecialidadeModel> especialidade = _especialistaRepositorio.ListarEspecialidade();
-            return View(especialidade);
+
+            return View();
 
         }
-        
+
         // GET: EspecialistaController/Create
         public ActionResult Salvar()
         {
+            ViewBag.especialidades = new SelectList(_bancocontext.especialidades, "id", "nome");
             return View();
         }
 
         // POST: EspecialistaController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(EspecialistaModel especialista)
+        public  IActionResult Create( EspecialistaModel especialista)
         {
 
+          
             _especialistaRepositorio.SalvarEspecialista(especialista);
             return RedirectToAction("Index");
         }
