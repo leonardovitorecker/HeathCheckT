@@ -1,0 +1,16 @@
+﻿@model IEnumerable<HeathCheck1.Models.EspecialistaModel> 
+ 
+@{ 
+    ViewBag.Title = "ListarEspecialista"; 
+} 
+ 
+<h2>Index</h2> 
+ 
+<p> 
+  
+     
+     @using (Html.BeginForm()){    
+         <p> Title: @Html.TextBox("searchstring") <br />   
+         <input type="submit" value="Filter" ></p> 
+        } 
+</p>

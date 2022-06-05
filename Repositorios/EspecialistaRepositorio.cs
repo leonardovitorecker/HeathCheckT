@@ -15,9 +15,8 @@ namespace HeathCheck1.Repositorios
             _bancocontext = context;
         }
 
-        
+     
 
-      
         public List<EspecialistaModel> ListarEspecialistas()
         {
             return _bancocontext.especialistas.ToList();

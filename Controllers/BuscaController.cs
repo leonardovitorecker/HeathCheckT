@@ -1,12 +1,42 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HeathCheck1.Database;
+using HeathCheck1.Models;
+using HeathCheck1.Repositorios;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HeathCheck1.Controllers
 {
     public class BuscaController : Controller
     {
-        public IActionResult Index()
+        private readonly IEspecialistaRepositorio _especialistaRepositorio;
+
+
+        private readonly Context _bancocontext;
+
+
+        public BuscaController(IEspecialistaRepositorio especialistaRepositorio, Context context)
         {
-            return View();
+            _especialistaRepositorio = especialistaRepositorio;
+
+            _bancocontext = context;
+
+        }
+        public IActionResult BuscaEspecialista()
+        {
+
+            return View("ListarEspecialista");
+        }
+
+        public IActionResult ListarEspecialista(string searchstring)
+        {
+            var especialista = from m in _bancocontext.especialistas
+                               select m;
+
+            if (!String.IsNullOrEmpty(searchstring))
+            {
+                especialista = especialista.Where(s => s.name.Contains(searchstring));
+            }
+
+            return View(especialista);
         }
     }
 }

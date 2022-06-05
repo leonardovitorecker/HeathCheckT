@@ -19,6 +19,7 @@ namespace HeathCheck1.Controllers
         // GET: UsuarioController/Create
         public ActionResult Salvar()
         {
+
             return View();
         }
 
