@@ -10,6 +10,6 @@ namespace HeathCheck1.Repositorios
 
         EspecialistaModel SalvarEspecialista(EspecialistaModel especialista);
        
-
+       
     }
 }

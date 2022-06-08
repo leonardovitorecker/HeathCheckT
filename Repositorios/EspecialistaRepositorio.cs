@@ -11,6 +11,7 @@ namespace HeathCheck1.Repositorios
       
         public EspecialistaRepositorio(Context context)
         {
+
             _bancocontext = context;
         }
 

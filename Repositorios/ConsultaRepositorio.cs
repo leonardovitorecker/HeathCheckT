@@ -3,7 +3,7 @@ using HeathCheck1.Models;
 
 namespace HeathCheck1.Repositorios
 {
-    public class ConsultaRepositorio:IConsultaRepositorio
+    public class ConsultaRepositorio : IConsultaRepositorio
     {
         private readonly Context _bancocontext;
         public ConsultaRepositorio(Context context)
@@ -11,7 +11,16 @@ namespace HeathCheck1.Repositorios
             _bancocontext = context;
         }
 
-     
+        public  ConsultaModel SalvarConsulta(ConsultaModel consulta)
+        {
 
+            _bancocontext.consultas.Add(consulta);
+            _bancocontext.SaveChanges();
+
+            return consulta;
+        }
+
+       
+    
     }
 }
