@@ -36,10 +36,11 @@ namespace HeathCheck1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(ConsultaModel consulta)
         {
+            
 
-
-            _consultaRepositorio.SalvarConsulta(consulta);
-            return RedirectToAction("Index");
+                _consultaRepositorio.SalvarConsulta(consulta);
+                return RedirectToAction("Index");
+            
         }
     }
 }

@@ -11,7 +11,7 @@ namespace HeathCheck1.Repositorios
             _bancocontext = context;
         }
 
-        public ConsultaModel SalvarConsulta(ConsultaModel consulta)
+        public  ConsultaModel SalvarConsulta(ConsultaModel consulta)
         {
 
             _bancocontext.consultas.Add(consulta);
@@ -19,5 +19,8 @@ namespace HeathCheck1.Repositorios
 
             return consulta;
         }
+
+       
+    
     }
 }

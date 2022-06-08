@@ -24,8 +24,10 @@
 <h1 class="display-4">agendar consulta</h1>
 </div>
 
-<form asp-controller="Agendamento" asp-action="Salvar" method="post">
-    
+ <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+<form asp-controller="Agendamento" asp-action="Create" method="post">
+  
 
     <div class="form-group"  >
    <input type="text" asp-for="nomePaciente" class="form-control" placeholder="Digite seu nome">
@@ -38,11 +40,17 @@
    <input type="text" asp-for="descricaoConsulta" class="form-control" placeholder="digite o motivo da consulta">
     </div>
     <div class="form-group"  >
-   <input type="text" asp-for="dataAgendamento" class="form-control" placeholder="Digite sua data">
+   <input asp-for="dataAgendamento" class="form-control"  placeholder="Digite a data da baixa" />
+    <span asp-validation-for="dataAgendamento" class="text-danger"></span>
     </div>
+   
     
    
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+     <td> 
+           <a>
+            <input type="submit"  value="Agendar horario" class="btn btn-primary" 
+           ></a>
+    </td> 
 </form>
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>

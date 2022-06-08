@@ -22,12 +22,15 @@ namespace HeathCheck1.Controllers
         }
         public IActionResult BuscaEspecialista()
         {
+            
+            return View();
 
-            return View("ListarEspecialista");
+            
         }
 
         public IActionResult ListarEspecialista(string searchstring)
         {
+
             var especialista = from m in _bancocontext.especialistas
                                select m;
 

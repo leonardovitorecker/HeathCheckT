@@ -7,8 +7,7 @@
         public string? nomePaciente { get; set; }
         public string? descricaoConsulta { get; set; }
         public DateTime dataAgendamento { get; set; }     
-        public int especialistaid { get; set; }
-        public EspecialistaModel? especialista { get; set; }
+      
 
     }
 }

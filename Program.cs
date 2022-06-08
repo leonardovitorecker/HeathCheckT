@@ -12,8 +12,9 @@ builder.Services.AddDbContext<Context>(
 builder.Services.AddTransient<IEspecialistaRepositorio, EspecialistaRepositorio>();
 
 builder.Services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddTransient<IConsultaRepositorio, ConsultaRepositorio>();
 var app = builder.Build();
-
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

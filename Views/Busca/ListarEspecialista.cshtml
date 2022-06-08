@@ -11,6 +11,7 @@
 </p>
  
 
+
 <table class="table">
     <thead>
         <tr>
@@ -29,12 +30,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.telefone)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.especialidade)
-            </th>
+           
+           
             <th></th>
         </tr>
     </thead>
@@ -56,17 +53,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.telefone)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.especialidade.id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
+          
+           <td> 
+           <a asp-controller="Agendamento" asp-action="Salvar" asp-route-id="@item.id">
+                    <input type="submit" value="Agendar horario" class="btn btn-primary"
+                     
+                    ></a>
+            </td> 
         </tr>
 }
     </tbody>
