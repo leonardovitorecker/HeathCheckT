@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HeathCheck1.Migrations
 {
-    public partial class criandotabelaconsulta : Migration
+    public partial class banco : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

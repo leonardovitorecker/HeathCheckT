@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HeathCheck1.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220608011427_criandotabelaconsulta")]
-    partial class criandotabelaconsulta
+    [Migration("20220611193518_banco")]
+    partial class banco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
