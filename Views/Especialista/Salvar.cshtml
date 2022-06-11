@@ -6,7 +6,7 @@
         <div class="col-5">
             <div class="card ">
                 <div class="card-header text-center">
-                    <h2>Cadastro de Usuário</h2>
+                    <h2>Cadastro de Especialista</h2>
                 </div>
                 <div class="card-body">
                     <div class="form-group mb-3"  >
@@ -26,22 +26,14 @@
                     </div>
                     <div class="form-group mb-3"  >
                        <input type="text" asp-for="registro" class="form-control" placeholder="CRM">
-                    </div>
-                     <select name="especialidade" asp-action="BuscarEspecialidade">
-                      <% foreach(var in model)
-                      {%>
-                        <%=Html.actionLink"BuscarEspecialidade",new {id=item.id}  </%>
-
-                      }
-                     <option value=1 selected> selecione  a especialidade</option>
-
-                        <option value=2>item.nome</option>
-                        <option>43214123</option>
-      
-                   </select>
+                    </div  class="form-group mb-3" >
+                <select  asp-items=@ViewBag.especialidades nome="nome" 
+                asp-for="especialidadeid" class="form-control" > 
+                 <option value="0">Selecione a especialidade</option></select>
                 </div>
                 <div class="card-footer">
-                     <button type="submit" class="btn btn-primary">Cadastrar</button>
+                     <button type="submit" asp-controller="Busca" asp-route-action="BuscaEspecialista"
+                            class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
         </div>

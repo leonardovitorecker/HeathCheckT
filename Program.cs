@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>(
     options => options.UseNpgsql(
-        "Host=localhost;Port=5432;Database=Projetoteste1;User Id=postgres; Password=univel;"));
+        "Host=localhost;Port=5432;Database=Projetoteste1;User Id=postgres; Password=postgres;"));
 builder.Services.AddTransient<IEspecialistaRepositorio, EspecialistaRepositorio>();
 
 builder.Services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
@@ -32,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Busca}/{action=BuscaEspecialista}/{id?}");
 
 app.Run();
