@@ -6,6 +6,12 @@ namespace HeathCheck1.Repositorios
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly Context _bancocontext;
+
+        public UsuarioModel BuscarPorLogin(string nomeUsuario)
+        {
+            return _bancocontext.usuarios.FirstOrDefault(x => x.nomeUsuario.ToUpper() == nomeUsuario.ToUpper());
+        }
+
         public UsuarioRepositorio(Context context)
         {
             _bancocontext = context;

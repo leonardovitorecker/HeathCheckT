@@ -17,6 +17,12 @@ namespace HeathCheck1.Models
 
     
         public string? senhaUsuario { get; set; }
-       
+
+        public bool SenhaValida(string senha)
+        {
+            return senhaUsuario == senha;
+        }
+
+      
     }
 }
