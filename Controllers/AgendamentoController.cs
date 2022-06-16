@@ -39,7 +39,7 @@ namespace HeathCheck1.Controllers
             
 
                 _consultaRepositorio.SalvarConsulta(consulta);
-                return RedirectToAction("Index");
+                return RedirectToAction("BuscaEspecialista", "Busca");
             
         }
     }

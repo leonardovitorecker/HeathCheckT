@@ -30,7 +30,7 @@ namespace HeathCheck1.Controllers
         {
 
             _usuarioRepositorio.Salvar(usuario);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Login");
         }
 
        

@@ -48,7 +48,7 @@ namespace HeathCheck1.Controllers
 
           
             _especialistaRepositorio.SalvarEspecialista(especialista);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Login");
         }
 
 

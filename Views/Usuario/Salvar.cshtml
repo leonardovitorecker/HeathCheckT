@@ -1,3 +1,7 @@
+@{
+    Layout = "_LayoutDeslogado";
+}
+
 @model UsuarioModel
 
 <form asp-controller="Usuario" asp-action="Salvar" method="post">
@@ -17,11 +21,11 @@
                     </div>
     
                     <div class="form-group mb-3"  >
-                        <input type="text" asp-for="senhaUsuario" class="form-control" placeholder="Senha">
+                        <input type="password" asp-for="senhaUsuario" class="form-control" placeholder="Senha">
                     </div>
                 </div>
                 <div class="card-footer">
-                     <button type="submit" asp-controller="Busca" asp-route-action="BuscaEspecialista"
+                     <button type="submit" 
                             class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
