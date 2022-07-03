@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HeathCheck1
+build_property.RootNamespace = HeathCheck1
+build_property.ProjectDir = C:\Users\LEONARDO\Documents\PastaDoGitHub\HeathCheck\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\LEONARDO\Documents\PastaDoGitHub\HeathCheck
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Agendamento/Salvar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cU2FsdmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Busca/BuscaEspecialista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzY2FcQnVzY2FFc3BlY2lhbGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Busca/ListarEspecialista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzY2FcTGlzdGFyRXNwZWNpYWxpc3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Especialista/Salvar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpc3RhXFNhbHZhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Usuario/Salvar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xTYWx2YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Shared/_LayoutDeslogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wjf438lmbw
+
+[C:/Users/LEONARDO/Documents/PastaDoGitHub/HeathCheck/Views/Shared/_Layoutlogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRsb2dhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-m35288iqkl
