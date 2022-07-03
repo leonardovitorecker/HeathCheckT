@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>(
     options => options.UseNpgsql(
-        "Host=localhost;Port=5432;Database=Projetoteste1;User Id=postgres; Password=postgres;"));
+        "Host=localhost;Port=5432;Database=HeathCheck1;User Id=postgres; Password=postgres;"));
 builder.Services.AddTransient<IEspecialistaRepositorio, EspecialistaRepositorio>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

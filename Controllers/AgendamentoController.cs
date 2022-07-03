@@ -1,4 +1,9 @@
-﻿using HeathCheck1.Database;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using HeathCheck1.Database;
 using HeathCheck1.Models;
 using HeathCheck1.Repositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +29,7 @@ namespace HeathCheck1.Controllers
 
        
 
-        private readonly Context _bancocontext;
+  
 
 
         
