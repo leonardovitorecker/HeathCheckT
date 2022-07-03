@@ -1,0 +1,29 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+.main-wrapper {
+    padding: 2rem;
+    border-bottom: 1px solid #CCC;
+    background-color: aquamarine;
+    background-image: url(https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1080/https://ingracio.adv.br/wp-content/uploads/2020/09/reforma-da-previdencia-medicos-1080x630.jpg);
+    background-repeat: no-repeat;
+    min-height: 450px;
+    background-size: cover;
+}
+
+
+

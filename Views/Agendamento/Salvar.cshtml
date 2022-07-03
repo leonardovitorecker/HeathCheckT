@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Heath.styles.css" asp-append-version="true" />
+  
+
+</head>
+
+
+
+<div class="text-center">
+<h1 class="display-4">Ver agenda médica</h1>
+<button onclick="window.location.href = 'https://calendar.google.com/calendar/u/0/r/' ">Abrir agenda</button>
+</div>
+
+ <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+  @if (ViewBag.EventList!=null)
+                {
+                  <table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+               Descrição
+            </th>
+            <th>
+                Inicío da consulta
+            </th>
+            <th>
+               Término da consulta
+            </th>
+           
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item1 in ViewBag.EventList as List<HeathCheck1.Controllers.AgendamentoController.calenderEvent>)
+             {
+                  <tr>
+                      <td>
+                      @item1.Summary
+                      </td>
+                      <td>
+                       @item1.Organizer
+                       </td>
+                      <td>
+                         @item1.Description
+                      </td>
+                      <td>
+                          @item1.StartTime
+                       </td>
+                      <td>
+                           @item1.EndTime
+                      </td>
+                  </tr>
+                        }
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-danger" >no upcommign events</div>
+                }
+                <td> 
+    
+   
+
+
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+   
