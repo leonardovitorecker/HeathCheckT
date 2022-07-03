@@ -1,10 +1,10 @@
-﻿@*
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    Layout = "_LayoutLogado";
+    Layout = null;
 }
-@model ConsultaModel
+
 
 <head>
     <meta charset="utf-8" />
@@ -20,37 +20,67 @@
 
 
 <div class="text-center">
-<h1 class="display-4">agendar consulta</h1>
+<h1 class="display-4">Ver agenda médica</h1>
+<button onclick="window.location.href = 'https://calendar.google.com/calendar/u/0/r/' ">Abrir agenda</button>
 </div>
 
  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+  @if (ViewBag.EventList!=null)
+                {
+                  <table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+               Descrição
+            </th>
+            <th>
+                Inicío da consulta
+            </th>
+            <th>
+               Término da consulta
+            </th>
            
-<form asp-controller="Agendamento" asp-action="Create" method="post">
-  
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item1 in ViewBag.EventList as List<HeathCheck1.Controllers.AgendamentoController.calenderEvent>)
+             {
+                  <tr>
+                      <td>
+                      @item1.Summary
+                      </td>
+                      <td>
+                       @item1.Organizer
+                       </td>
+                      <td>
+                         @item1.Description
+                      </td>
+                      <td>
+                          @item1.StartTime
+                       </td>
+                      <td>
+                           @item1.EndTime
+                      </td>
+                  </tr>
+                        }
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-danger" >no upcommign events</div>
+                }
+                <td> 
+    
+   
 
-    <div class="form-group"  >
-   <input type="text" asp-for="nomePaciente" class="form-control" placeholder="Digite seu nome">
-    </div>
-    
-    <div class="form-group"  >
-   <input type="text" asp-for="tipovisita" class="form-control" placeholder="Digite o tipo da vista">
-    </div>
-    <div class="form-group"  >
-   <input type="text" asp-for="descricaoConsulta" class="form-control" placeholder="digite o motivo da consulta">
-    </div>
-    <div class="form-group"  >
-   <input asp-for="dataAgendamento" class="form-control"  placeholder="Digite a data da baixa" />
-    <span asp-validation-for="dataAgendamento" class="text-danger"></span>
-    </div>
-   
-    
-   
-     <td> 
-           <a>
-            <input type="submit"  value="Agendar horario" class="btn btn-primary" 
-           ></a>
-    </td> 
-</form>
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
