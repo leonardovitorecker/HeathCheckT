@@ -43,10 +43,16 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Usuario" asp-action="Salvar" >Usuário</a></li>
                               </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-                        </li>
-                    </ul>
+                        <li class="nav-item dropdown ">
+                              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-dark  fs-5" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="LoginEspecialista" asp-action="IndexEspecialista">Especialista</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Login" asp-action="Index">Usuario</a></li>
+                                 </ul>
+                                  </li>
+                            </ul>
                 </div>
             </div>
         </nav>

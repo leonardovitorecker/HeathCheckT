@@ -10,10 +10,14 @@ namespace HeathCheck1.Controllers
         private readonly IUsuarioRepositorio _usuarioRepositorio;
        private readonly ISessao _sessao;
 
+       
+
         public LoginController(IUsuarioRepositorio usuarioRepositorio,
+                               
                                ISessao sessao)
         {
             _usuarioRepositorio = usuarioRepositorio;
+           
            _sessao = sessao;
         }
 

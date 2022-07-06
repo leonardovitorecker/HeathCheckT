@@ -27,6 +27,13 @@ namespace HeathCheck1.Controllers
 
             
         }
+        public IActionResult TelaEspecialista()
+        {
+
+            return View();
+
+
+        }
 
         public IActionResult ListarEspecialista(string searchstring)
         {
