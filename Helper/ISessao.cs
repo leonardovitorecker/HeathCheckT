@@ -8,5 +8,9 @@ namespace HeathCheck1.Models
         void CriarSessaoDoUsuario(UsuarioModel usuario);
         void RemoverSessaoUsuario();
         UsuarioModel BuscarSessaoDoUsuario();
+        void CriarSessaoDoEspecialista(EspecialistaModel especialista);
+        void RemoverSessaoEspecialista();
+        EspecialistaModel BuscarSessaoDoEspecialista();
+
     }
 }

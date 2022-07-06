@@ -1,4 +1,5 @@
 ﻿using HeathCheck1.Models;
+using HeathCheck1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

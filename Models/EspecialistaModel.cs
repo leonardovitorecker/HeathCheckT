@@ -23,6 +23,9 @@ namespace HeathCheck1.Models
 
         public EspecialidadeModel? especialidade { get; set; }
 
-     
+        public bool SenhaValida(string senha)
+        {
+            return senha == senha;
+        }
     }
 }

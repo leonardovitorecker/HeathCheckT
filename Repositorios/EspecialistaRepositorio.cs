@@ -32,9 +32,12 @@ namespace HeathCheck1.Repositorios
 
             return especialista;
         }
-        
-
+        public EspecialistaModel BuscarPorLoginEspecialista(string nomeEspecialista)
+        {
+            return _bancocontext.especialistas.FirstOrDefault(x => x.name.ToUpper() == nomeEspecialista.ToUpper());
         }
+
+    }
     }
 
 

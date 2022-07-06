@@ -9,7 +9,7 @@ namespace HeathCheck1.Repositorios
         List<EspecialidadeModel> ListarEspecialidade();
 
         EspecialistaModel SalvarEspecialista(EspecialistaModel especialista);
-       
-       
+        EspecialistaModel BuscarPorLoginEspecialista(string nomeEspecialista);
+
     }
 }
