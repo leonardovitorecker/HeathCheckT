@@ -6,58 +6,26 @@
     ViewData["Title"] = "ListarEspecialista";
 }
 
-<h1>ListarEspecialista</h1>
+<h1 class="text-center">Especialistas</h1>
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.sobrenome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.registro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.telefone)
-            </th>
-           
-           
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sobrenome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.registro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.telefone)
-            </td>
-          
-           <td> 
-          
-             <form action="https://calendar.google.com/calendar/u/0/r/day" target="_blank">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-1">
+        <div class="col-md-4 mt-4">
+          <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-center">
+            <h5 class="card-title">@Html.DisplayFor(modelItem => item.name) @Html.DisplayFor(modelItem => item.sobrenome)</h5>
+            <p class="card-text">@Html.DisplayFor(modelItem => item.email)</p>
+            <p class="card-text">@Html.DisplayFor(modelItem => item.telefone)</p>
+            <p class="card-text">@Html.DisplayFor(modelItem => item.registro)</p>
+            <form action="https://calendar.google.com/calendar/u/0/r/day" target="_blank">
                      <input type="submit" value="Agendar" class="btn btn-primary">
              </form>
-            </td> 
-        </tr>
+          </div>
+        </div>
+      </div>
+    </div>
 }
-    </tbody>
-</table>

@@ -7,26 +7,25 @@
 
 
 <form asp-controller="Login" asp-action="Entrar" method="post">
-     <div class="row justify-content-center">
-        <div class="col-5">
-            <div class="card ">
+     <div class="row justify-content-center mt-5">
+        <div class="col-3">
+            <div class="card">
                 <div class="card-header text-center">
                       <h2>Login usuario</h2>
                   </div>
                 <div class="card-body">
                      <div class="form-group mb-3">
-                    <input type="text" asp-for="nomeUsuario" class="form-control" id="nomeUsuario" placeholder="Digite o nome usuario">
+                    <input type="text" asp-for="nomeUsuario" class="form-control" id="nomeUsuario" placeholder="Nome ou usuário">
                    @Html.ValidationMessageFor(x => x.nomeUsuario)
                 </div>
                 <div class="form-group mb-3">
-                 <input type="password" asp-for="senha" class="form-control" id="senha" placeholder="Digite a Senha">
+                 <input type="password" asp-for="senha" class="form-control" id="senha" placeholder="Senha">
                  @Html.ValidationMessageFor(x => x.senha)
                 </div>
                 </div>
-                 <div class="card-footer">
-                      <button type="submit" 
-                            class="btn btn-primary">Entrar</button>
-             </div>
+                <div class="card-footer ">
+                      <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
 @if (TempData["MensagemErro"] != null)
 {
     <div class="alert alert-danger" role="alert">
