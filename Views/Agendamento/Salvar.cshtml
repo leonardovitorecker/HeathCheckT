@@ -18,68 +18,37 @@
 </head>
 
 
-
-<div class="text-center">
-
-
-</div>
+<div class="d-flex flex-wrap justify-content-center mt-3">
 
  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
   @if (ViewBag.EventList!=null)
                 {
-                  <table class="table">
-    <thead>
-        <tr>
-            <th>
-               Nome
-            </th>
-            <th>
-                Email
-            </th>
-            <th>
-               Descrição
-            </th>
-            <th>
-                Inicío da consulta
-            </th>
-            <th>
-               Término da consulta
-            </th>
-           
-           
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item1 in ViewBag.EventList as List<HeathCheck1.Controllers.AgendamentoController.calenderEvent>)
-             {
-                  <tr>
-                      <td>
-                      @item1.Summary
-                      </td>
-                      <td>
-                       @item1.Organizer
-                       </td>
-                      <td>
-                         @item1.Description
-                      </td>
-                      <td>
-                          @item1.StartTime
-                       </td>
-                      <td>
-                           @item1.EndTime
-                      </td>
-                  </tr>
-                        }
-                    </table>
-                }
-                else
-                {
-                    <div class="alert alert-danger" >no upcommign events</div>
-                }
-                <td> 
     
-   
+    @foreach (var item1 in ViewBag.EventList as List<HeathCheck1.Controllers.AgendamentoController.calenderEvent>) {
+        
+            <div class="card me-3 d-flex" style="max-width: 540px;">
+              <div class="row g-1">
+                <div class="col-md-2 m-2">
+                  <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="img-fluid rounded-start " style="width: 120px">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">@item1.Summary</h5>
+                    <p class="card-text fw-bold">Email:</p>
+                    <p class="card-text">@item1.Organizer</p>
+                    <p class="card-text fw-bold">Descrição:</p>
+                    <p class="card-text">@item1.Description</p>
+                    <p class="card-text fw-bold">Inicio da Consulta:</p>
+                    <p class="card-text">@item1.StartTime</p>
+                    <p class="card-text fw-bold">Fim da Consulta:</p>
+                    <p class="card-text">@item1.EndTime</p>
+                  </div>
+                </div>
+              </div>
+            </div>   
+}
+}
+</div>
 
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>
